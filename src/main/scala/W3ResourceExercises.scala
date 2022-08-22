@@ -33,7 +33,7 @@ object W3ResourceExercises extends App {
   println(absoluteDiff(60))
 
   //4) Write a Scala program to check two given integers, and return true if one of them is 30 or if their sum is 30.
-
+//---
   def equals30(a: Int, b: Int): Boolean = {
    a==30 || b==30 || a+b == 304
   }
@@ -41,7 +41,7 @@ object W3ResourceExercises extends App {
   println(equals30(10,10))
 
   //5) Write a Scala program to check a given integer and return true if it is within 20 of 100 or 300.
-
+//---
   def within20(a: Int): Boolean ={
    Math.abs(100 -a)  <= 20 || Math.abs(300-a) <=20
 
@@ -50,6 +50,15 @@ object W3ResourceExercises extends App {
   println(within20(200))
   println(within20(70))
 
+    //6 Write a Scala program to create a new String where 'if' is added to the front of a given string . If the string already begins with 'if', return the string unchanged.
+//--if/else syntax
+  def addIfNoIf(a: String): String = {
+  if(a.startsWith("if")) a else "if " + a
+
+  }
+
+  println("Result: " + addIfNoIf("if else"))
+  println("Result: " + addIfNoIf("else"))
 
 }
 
