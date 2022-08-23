@@ -1,6 +1,6 @@
 import W3ResourceExercises.front2FourTimes
 
-import scala.math.abs
+import scala.math.{abs, max}
 
 object W3ResourceExercises extends App {
 
@@ -175,5 +175,72 @@ println("Result: " + frontToBack("a"))
   println("Result: " + weatherGreaterThan100(120, -1))
   println("Result: " + weatherGreaterThan100(-1, 120))
   println("Result: " + weatherGreaterThan100(2, 120))
+
+
+  //15 Write a Scala program to check two given integers whether either of them is in the range 100...200 inclusive.
+
+  def between100And200(a : Int, b : Int):Boolean={
+  (a >= 100 && a <= 200) || (b >= 100 && b <= 200)
+  }
+
+  println("Result: " + between100And200(100, 199))
+  println("Result: " + between100And200(250, 300))
+  println("Result: " + between100And200(105, 190))
+
+  //16 Write a Scala program to check whether three given integer values are in the range 20..50 inclusive. Return true if 1 or more of the values is in the said range otherwise false.
+
+  def between20And50(a: Int, b: Int, c:Int): Boolean={
+    (a >= 20 && a<= 50) || (b >= 20 && b<= 50) || (c >= 20 && c <= 50)
+
+  }
+
+  println("Result: " + between20And50(11, 20, 12))
+  println("Result: " + between20And50(30, 30, 17))
+  println("Result: " + between20And50(25, 35, 50))
+  println("Result: " + between20And50(15, 12, 8))
+
+  //17 Write a Scala program to check whether two given integer values are in the range 20..50 inclusive. Return true if 1 or the other is in the said range otherwise false.
+
+  //TODO : Not quite understanding how this is the solution--
+  // (x <= 20 || y >= 50) || (y <= 20 || x >= 50)
+
+  def twoNumsBetween20and50(a: Int, b: Int): Boolean = {
+    (a >=20 && a <=50) || (b >= 20 && b <= 50)
+  }
+
+  println("Result: " + twoNumsBetween20and50(20, 84))
+  println("Result: " + twoNumsBetween20and50(14, 50))
+  println("Result: " + twoNumsBetween20and50(11, 45))
+  println("Result: " + twoNumsBetween20and50(25, 40))
+
+  //18 Write a Scala program to check whether a string 'yt' appears at index 1 in a given string. If it appears return a string without 'yt' otherwise return the original string.
+//TODO: W3Resources solution == if (str.drop(1).startsWith("yt")) str.replaceFirst("yt", "") else str
+
+
+  def stringHasYT(str:String): String ={
+    if(str.substring(1,3).equals("yt")) str.substring(0,1) +str.substring(3)
+    else str
+  }
+
+  println("Result: " + stringHasYT("Scala"))
+  println("Result: " + stringHasYT("yytade"))
+  println("Result: " + stringHasYT("ytsues"))
+
+  // 19 Write a Scala program to check the largest number among three given integers.
+//TODO: W3Resources solution == List(x, y, z).max
+  def maxNum(a: Int, b: Int, c: Int): Int={
+    var firstMax= Math.max(a,b)
+    Math.max(firstMax,c)
+
+  }
+
+  println("Result: " + maxNum(1, 2, 3))
+  println("Result: " + maxNum(1, 3, 2))
+  println("Result: " + maxNum(1, 1, 1))
+  println("Result: " + maxNum(1, 2, 2))
+
+  //20 Write a Scala program to check which number is the nearest to the value 100 among two given integers. Return 0 if the two numbers are equal.
+
+
 
 }
