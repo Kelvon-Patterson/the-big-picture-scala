@@ -1,3 +1,5 @@
+import W3ResourceExercises.front2FourTimes
+
 import scala.math.abs
 
 object W3ResourceExercises extends App {
@@ -51,7 +53,7 @@ object W3ResourceExercises extends App {
   println(within20(70))
 
     //6 Write a Scala program to create a new String where 'if' is added to the front of a given string . If the string already begins with 'if', return the string unchanged.
-//--if/else syntax
+//TODO--if/else syntax
   def addIfNoIf(a: String): String = {
   if(a.startsWith("if")) a else "if " + a
 
@@ -66,7 +68,7 @@ object W3ResourceExercises extends App {
     val result = str.substring(0,index) + str.substring(index+1)
     result
   }
-  //W3resources solution
+  //TODO--W3resources solution
   def removeChar1(str: String, n: Int): String =
   {
     str.take(n) + str.drop(n + 1)
@@ -77,7 +79,7 @@ object W3ResourceExercises extends App {
   println("Result: " + removeChar("Scala", 4))
 
   //8 Write a scala program to exchange the first and last characters in a given string and return the new string
-//--Need to solve for egde cases as well
+//TODO--Need to solve for edge cases as well
   def exchangeChar(str:String):String={
     val len= str.length
   if(len<=1) str
@@ -88,5 +90,90 @@ object W3ResourceExercises extends App {
   println("Result: " + exchangeChar("abcd"))
   println("Result: " + exchangeChar("ab"))
   println("Result: " + exchangeChar("a"))
-}
 
+    //9 Write a Scala program to create a new string which is 4 copies of the front 2 characters of a given string. If the given string is less than 2 return the original string.
+
+  def front2FourTimes(str:String): String={
+    val len= str.length
+    if(len<=2) str
+    else str.substring(0,2)*4
+    }
+
+  println("Result: " + front2FourTimes("Scala"))
+  println("Result: " + front2FourTimes("abcd"))
+  println("Result: " + front2FourTimes("ab"))
+  println("Result: " + front2FourTimes("a"))
+
+
+  //10 Write a Scala program to create a new string with the last char added at the front and back of a given string of length 1 or more.
+
+  def frontToBack(str:String): String= {
+    val len = str.length
+    if (len <= 1) str
+    else str.substring(str.length-1) + str + str.substring(str.length-1)
+
+  }
+  //TODO: W3Resources solution-- def test(str1: String): String =
+  //    {
+  //    val len = str1.length
+  //    val last = str1.charAt(len - 1)
+  //    last + str1 + last
+  //    }
+
+
+println("Result: " + frontToBack("Scala"))
+println("Result: " + frontToBack("abcd"))
+println("Result: " + frontToBack("ab"))
+println("Result: " + frontToBack("a"))
+
+  //11) Write a Scala program to check whether a given positive number is a multiple of 3 or a multiple of 7.
+//TODO: dont need to check for positive number since it was given.
+  def isPositive3or7(num: Int): Boolean={
+    num % 3 ==0 ||  num % 7 == 0
+
+  }
+
+  println("Result: " + isPositive3or7(3))
+  println("Result: " + isPositive3or7(14))
+  println("Result: " + isPositive3or7(12))
+  println("Result: " + isPositive3or7(37))
+
+  //12 Write a scala program to create a new string taking the first 3 characters of a given string and return the string with the 3 characters added at both the front and back. If the given string length is less than 3, use whatever characters are there.
+
+  def threeFront3back(str: String): String={
+  val firstThree = str.substring(0,3)
+
+    if(str.length < 3) str * 3
+    else firstThree + str + firstThree
+
+  }
+//TODO  FIGURE OUT WHY RESULT 3 AND 4 ARENT WORKING
+//  println("Result: " + threeFront3back("Scala"))
+//  println("Result: " + threeFront3back("abcd"))
+//  println("Result: " + threeFront3back("ab"))
+//  println("Result: " + threeFront3back("a"))
+
+//13 Write a Scala program to check whether a given string starts with 'Sc' or not
+
+  def startsWithSc(str: String): Boolean ={
+    str.startsWith("Sc")
+
+  }
+
+  println("Result: " + startsWithSc("Scala"))
+  println("Result: " + startsWithSc("abcd"))
+  println("Result: " + startsWithSc("sc"))
+  println("Result: " + startsWithSc("a"))
+
+  //14 Write a Scala program to check whether one of the given temperatures is less than 0 and the other is greater than 100
+
+  def weatherGreaterThan100(num1: Int,num2: Int): Boolean ={
+    (num1 < 0 && num2 > 100) || (num2 < 0 && num1 > 100)
+
+  }
+
+  println("Result: " + weatherGreaterThan100(120, -1))
+  println("Result: " + weatherGreaterThan100(-1, 120))
+  println("Result: " + weatherGreaterThan100(2, 120))
+
+}
