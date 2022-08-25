@@ -328,7 +328,15 @@ def test(str1: String): Boolean = {
   println("Result: " + upperLast4("Python"))
   println("Result: " + upperLast4("abc"))
 
+  // 26 Write a Scala program to create a new string which is n (non-negative integer) copies of a given string.
 
+  def multiplyStr(str:String,n: Int): String={
+    str*n
+  }
+
+  println("Result: " + multiplyStr("Scala", 2))
+  println("Result: " + multiplyStr("Python", 1))
+  println("Result: " + multiplyStr("JS", 6))
 
 
 
