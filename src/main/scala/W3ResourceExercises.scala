@@ -301,12 +301,32 @@ def test(str1: String): Boolean = {
   println("Result: " + test("Zazz"))
   println("Result: " + test("false"))
 
+//24 Write a Scala program to check whether two given positive integers have the same last digit.
+//TODO : W3Resources solution   Math.abs(x % 10) eq Math.abs(y % 10)
+  def sameLastDigit(x: Int, y: Int): Boolean={
+    val strX = x.toString
+    val strY = y.toString
+    val lastX= strX.substring(strX.length-1)
+    val lastY = strY.substring(strY.length-1)
+    if(lastX==lastY) true else false
+  }
 
+  println("Result: " + sameLastDigit(123, 456))
+  println("Result: " + sameLastDigit(12, 512))
+  println("Result: " + sameLastDigit(7, 87))
+  println("Result: " + sameLastDigit(12, 45))
 
+//25 Write a Scala program to convert the last 4 characters of a given string in uppercase. If the length of the string has less than 4 then uppercase all the characters.
+//TODO W3Resources solution:  str1.take(str1.length() - 4) + str1.drop(str1.length() - 4).toUpperCase()
+  def upperLast4(str: String): String = {
+    val len = str.length
+    val last4 = str.length-4
+    if(len <4) str.toUpperCase() else str.substring(0,last4) + str.substring(last4).toUpperCase()
+  }
 
-
-
-
+  println("Result: " + upperLast4("Scala"))
+  println("Result: " + upperLast4("Python"))
+  println("Result: " + upperLast4("abc"))
 
 
 
