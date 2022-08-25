@@ -1,6 +1,6 @@
 import W3ResourceExercises.front2FourTimes
 
-import scala.math.{abs, max}
+import scala.math.{abs, acos, asin, max}
 
 object W3ResourceExercises extends App {
 
@@ -240,6 +240,20 @@ println("Result: " + frontToBack("a"))
   println("Result: " + maxNum(1, 2, 2))
 
   //20 Write a Scala program to check which number is the nearest to the value 100 among two given integers. Return 0 if the two numbers are equal.
+
+  def nearestTo100(a: Int, b: Int): Int ={
+    var aAbsNum = Math.abs(a-100)
+    var bAbsNum = Math.abs(b-100)
+    if(aAbsNum==bAbsNum) 0
+    else if(aAbsNum < bAbsNum ) a
+    else b
+  }
+
+  println("Result: " + nearestTo100(78, 95))
+  println("Result: " + nearestTo100(95, 95))
+  println("Result: " + nearestTo100(99, 70))
+
+  // 21 Write a scala program to check whether two given integers are in range 40...50 inclusive, or they are both in range 50..60 inclusive
 
 
 
