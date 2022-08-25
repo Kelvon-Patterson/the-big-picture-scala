@@ -254,6 +254,74 @@ println("Result: " + frontToBack("a"))
   println("Result: " + nearestTo100(99, 70))
 
   // 21 Write a scala program to check whether two given integers are in range 40...50 inclusive, or they are both in range 50..60 inclusive
+//TODO: W3Resources solution : --
+// List(x, y).forall { m => m >= 40 && m <= 50 } || List(x, y).forall { n => n >= 50 && n <= 60 }
+  def inRange40To50Or50To60(x: Int, y: Int): Boolean={
+  List(x, y).forall { m => m >= 40 && m <= 50 } || List(x, y).forall { n => n >= 50 && n <= 60 }
+  }
+
+  //22 Write a Scala program to find the larger value from two positive integer values in the range 20...30 inclusive, or return 0 if neither is in that range
+  //TODO : W3Resources solution
+  // val max_of_two = List(x, y).max
+  //    if (max_of_two >= 20 && max_of_two <= 30) max_of_two else 0
+
+  def largest20To30(x: Int, y: Int ): Int ={
+   val inRange = List(x,y).forall(m=> m >= 20 && m <=30)
+    if(inRange && x >y) x
+    else if (inRange && y>x || y == x) y else 0
+  }
+
+  println("Result: " + largest20To30(78, 95))
+  println("Result: " + largest20To30(20, 30))
+  println("Result: " + largest20To30(21, 25))
+  println("Result: " + largest20To30(28, 28))
+
+  // 23 Write a scala program to check whether a given character presents in a string between 2 to 4 times
+
+  def stringAppears2to4Times(str: String, char: Char): Boolean={
+    val  counter = str.count(_ == char )
+    if(counter >= 2 && counter <= 4 ) true else false
+  }
+
+  println("Result: " + stringAppears2to4Times("frizz",'z'))
+  println("Result: " + stringAppears2to4Times("zane",'z'))
+  println("Result: " + stringAppears2to4Times("Zazz",'z'))
+  println("Result: " + stringAppears2to4Times("false",'z'))
+
+// TODO: QUESTION SHOULD HAVE BEEN WRITTEN LIKE THIS IF THEY WANTED A SPECIFIC CHARACTER FOR THE SOLUTION.
+//  23a Write a scala program to check whether a given char 'z' presents in a string between 2 to 4 times
+  //THIS IS W3RESOURCES SOLUTION
+def test(str1: String): Boolean = {
+  val count_char = str1.count{ n => n == 'z' }
+  count_char >= 2 && count_char <= 4
+}
+
+  println("Result: " + test("frizz"))
+  println("Result: " + test("zane"))
+  println("Result: " + test("Zazz"))
+  println("Result: " + test("false"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
