@@ -1,8 +1,8 @@
-import W3ResourceExercises.front2FourTimes
+import W3ResourceExercisesBasics.front2FourTimes
 
 import scala.math.{abs, acos, asin, max}
 
-object W3ResourceExercises extends App {
+object W3ResourceExercisesBasics extends App {
 
 
   //1 write a Scala program to print "Hello World" and version of the scala language.
@@ -257,7 +257,7 @@ println("Result: " + frontToBack("a"))
 //TODO: W3Resources solution : --
 // List(x, y).forall { m => m >= 40 && m <= 50 } || List(x, y).forall { n => n >= 50 && n <= 60 }
   def inRange40To50Or50To60(x: Int, y: Int): Boolean={
-  List(x, y).forall { m => m >= 40 && m <= 50 } || List(x, y).forall { n => n >= 50 && n <= 60 }
+  List(x,y).forall { m => m >= 40 && m <= 50 } || List(x,y).forall { n => n >= 50 && n <= 60 }
   }
 
   //22 Write a Scala program to find the larger value from two positive integer values in the range 20...30 inclusive, or return 0 if neither is in that range
@@ -267,8 +267,8 @@ println("Result: " + frontToBack("a"))
 
   def largest20To30(x: Int, y: Int ): Int ={
    val inRange = List(x,y).forall(m=> m >= 20 && m <=30)
-    if(inRange && x >y) x
-    else if (inRange && y>x || y == x) y else 0
+    if(inRange && x > y) x
+    else if (inRange && y > x || y == x) y else 0
   }
 
   println("Result: " + largest20To30(78, 95))
@@ -279,7 +279,7 @@ println("Result: " + frontToBack("a"))
   // 23 Write a scala program to check whether a given character presents in a string between 2 to 4 times
 
   def stringAppears2to4Times(str: String, char: Char): Boolean={
-    val  counter = str.count(_ == char )
+    val  counter = str.count( _ == char )
     if(counter >= 2 && counter <= 4 ) true else false
   }
 
@@ -321,7 +321,7 @@ def test(str1: String): Boolean = {
   def upperLast4(str: String): String = {
     val len = str.length
     val last4 = str.length-4
-    if(len <4) str.toUpperCase() else str.substring(0,last4) + str.substring(last4).toUpperCase()
+    if(len<4) str.toUpperCase() else str.substring(0,last4) + str.substring(last4).toUpperCase()
   }
 
   println("Result: " + upperLast4("Scala"))
