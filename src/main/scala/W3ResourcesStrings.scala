@@ -58,11 +58,71 @@ println(uniCodePoint("w3resource - Scala", 9))
 
   println(endsWith("Python Exercises", "se"))
 
+//Write a scala program to check whether two String objects contain the same data.
 
+  def sameData(str1: String, str2: String): Boolean={
+    str1.equals(str2)
+  }
 
+  println(sameData("Stephen Edwin King", "Stephen Edwin King"))
 
+//Write a Scala program to get a substring of a given string between two specified positions.
 
+  def sameSub(str1: String, num1: Int, num2: Int):String={
+    str1.substring(num1,num2)
+  }
 
+  println(sameSub("The quick brown fox jumps over the lazy dog.",10,26 ))
+
+  //Write a scala program to convert all the characters to lowercase, uppercase strings
+
+  def toUpperCase(str:String):String={
+    str.toUpperCase
+  }
+  println(toUpperCase("The Quick BroWn FoX!"))
+   def toLowerCase(str:String):String ={
+     str.toLowerCase
+   }
+  println(toLowerCase("The Quick BroWn FoX!"))
+
+  //Write a Scala program to print after removing duplicates from a given string
+//TODO: Redo this problem with no help
+  def removeDupes(str:String): String={
+    //turn string in to an array of characters
+    val arr = str.toCharArray;
+    var targetStr = "";
+    for(value <- str){
+      if(targetStr.indexOf(value) == -1){
+       targetStr += value
+      }
+    }
+    targetStr
+  }
+println(removeDupes("2q34u923u4928402"))
+
+//Write a scala program to find the maximum occurring char in a string
+//TODO redo this problem with no help
+  def MaxOccurringChar(str1: String): Char = {
+    val N = 256;
+    val ctr = new Array[Int](N);
+    val l = str1.length();
+    for (i <- 0 until l)
+      ctr(str1.charAt(i)) = ctr(str1.charAt(i)) + 1;
+    var max = -1;
+    var result = ' ';
+    for (i <- 0 until l) {
+      if (max < ctr(str1.charAt(i))) {
+        max = ctr((str1.charAt(i)))
+        result = str1.charAt(i)
+      }
+    }
+    result
+  }
+
+def reverseString(str: String): String = {
+  str.reverse
+}
+  println(reverseString("reverse"))
 
 
 
