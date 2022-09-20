@@ -119,12 +119,68 @@ println(removeDupes("2q34u923u4928402"))
     result
   }
 
+  println("Max reoccurring string is " +  MaxOccurringChar("test string"))
+
 def reverseString(str: String): String = {
   str.reverse
 }
-  println(reverseString("reverse"))
+  println(reverseString("This is a test string"))
+
+  def trimString(str: String): String={
+    str.trim
+  }
+
+  println(trimString(" Scala Exercises "))
+  println(" Scala Exercises")
+
+def stringRotated(str1:String, str2: String): Boolean={
+ (str1.length == str2.length) && ((str1+str1).indexOf(str2) != -1)
+
+}
 
 
+  println("These strings are rotations of eachother: " + stringRotated("ABACD", "CDABA"))
 
 
+  def res(): Unit = {
+    val number: Option[Int] = Some(3)
+    val noNumber: Option[Int] = None
+    val result1 = number.fold(0)(_ * 3)
+    val result2 = noNumber.fold(0)(_ * 3)
+    println(result1)
+    println(result2)
+  }
+println(res())
+
+def lambda = {x:Int => x+1}
+  def lambda2 = (x: Int) => x + 2
+  val lambda3 = (x: Int) => x + 3
+
+  val lambda4 = new Function1[Int, Int] {
+    def apply(v1: Int): Int = v1 - 1
+  }
+
+  def lambda5(x: Int) = x + 1
+
+  val result = lambda(3)
+  val result1andhalf = lambda.apply(3)
+  val result2 = lambda2(3)
+  val result3 = lambda3(3)
+  val result4 = lambda4(3)
+  val result5 = lambda5(3)
+
+  println("result =" + result)
+  println("result and a half = " + result1andhalf)
+  println("result2 =" + result2)
+  println("result3 =" + result3)
+  println("result4 =" + result4)
+  println("result5 =" + result5)
+
+  def summation(x: Int, y: Int => Int) = y(x)
+
+  var incrementer = 3
+  def closure = (x: Int) => x + incrementer
+
+  val result6 = summation(10, closure)
+  println("result6 =" + result6)
 }
