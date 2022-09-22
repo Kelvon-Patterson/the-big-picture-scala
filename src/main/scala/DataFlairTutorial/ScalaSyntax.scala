@@ -98,9 +98,9 @@ object ScalaSyntax extends App {
 
   //TODO: H : SCALA MAIN METHOD
 
- def main(args: Array[String]):Unit = {
-    println("Hello, Scala developer")
-  }
+// def main(args: Array[String]):Unit = {
+//    println("Hello, Scala developer")
+//  }
 
   //TODO: I : FIELDS
   // A unique set of instance variables belongs to each object. These are fields, and they define the object's state.

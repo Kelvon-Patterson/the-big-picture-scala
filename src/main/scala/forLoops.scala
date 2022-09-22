@@ -40,5 +40,5 @@ object forLoops extends App {
    if i <6} yield {
    i*i
  }
-  println("result = " result)
+//  println("result = " result)
 }
