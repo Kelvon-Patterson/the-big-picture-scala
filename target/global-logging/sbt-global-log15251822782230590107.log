@@ -1,0 +1,21 @@
+[debug] > Exec(console, None, None)
+[debug] Evaluating tasks: Compile / console
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 28 Scala sources and 1 Java source to C:\Users\kelvon.patterson\Downloads\LSL-P-lightbend-scala-language-professional\Big_Picture_Pluralsight\target\scala-2.13\classes ...
+[info] Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.8. Compiling...
+[info]   Compilation completed in 7.429s.
+[warn] C:\Users\kelvon.patterson\Downloads\LSL-P-lightbend-scala-language-professional\Big_Picture_Pluralsight\src\main\scala\DataFlairTutorial\ScalaSyntax.scala:58:11: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+[warn]   (x:Int) => x*x
+[warn]           ^
+[warn] 2 deprecations (since 2.13.0)
+[warn] 1 deprecation (since 2.13.3)
+[warn] 3 deprecations in total; re-run with -deprecation for details
+[warn] four warnings found
+[info] done compiling
+[info] Starting scala interpreter...
+[warn] Canceling execution...
+[debug] Forcing garbage collection...
+[error] Cancelled: console
+[error] Cancelled: console
+[error] Use 'last' for the full log.
+[debug] > Exec(idea-shell, None, None)
